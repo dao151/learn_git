@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Horizon Voyages – Agence de voyage</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bs-body-font-family:'Source Sans 3',sans-serif;
+    --nuit:#0B2A3C; --lagon:#0E8FA0; --corail:#F26B4E; --sable:#F7F4EE;
+  }
+  body{background:#fff;color:var(--nuit)}
+  h1,h2,h3,h4,.navbar-brand{font-family:'Sora',sans-serif;font-weight:700}
+  .navbar{background:var(--nuit)}
+  .navbar-brand{color:#fff!important}
+  .navbar-brand i{color:var(--corail)}
+  .nav-link{color:#d5e6ee!important}
+  .nav-link:hover,.nav-link:focus{color:#fff!important}
+  .hero{min-height:90vh;display:flex;align-items:center;text-align:center;color:#fff;
+    background:linear-gradient(rgba(11,42,60,.45),rgba(11,42,60,.65)),
+    url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=80') center/cover;
+    background-color:var(--lagon)}
+  .hero h1{font-size:clamp(2.2rem,6vw,4rem)}
+  .btn-corail{background:var(--corail);border-color:var(--corail);color:#fff;font-weight:600;padding:.8rem 2.2rem}
+  .btn-corail:hover,.btn-corail:focus{background:#d9553a;border-color:#d9553a;color:#fff}
+  section{padding:5rem 0}
+  .bg-sable{background:var(--sable)}
+  .card{border:0;box-shadow:0 2px 10px rgba(11,42,60,.12);height:100%}
+  .card-img-top{height:210px;object-fit:cover;background:#cfe3e8}
+  .accordion-button:not(.collapsed){background:#e3f3f5;color:var(--nuit)}
+  .accordion-button:focus,.form-control:focus,.form-select:focus{border-color:var(--lagon);box-shadow:0 0 0 .2rem rgba(14,143,160,.3)}
+  .accordion-body a{color:var(--lagon);font-weight:600}
+  footer{background:var(--nuit);color:#d5e6ee;padding:2rem 0}
+  footer a{color:#fff;font-size:1.4rem;margin:0 .5rem}
+  footer a:hover{color:var(--corail)}
+</style>
+</head>
+<body>
+ 
+<!-- 1. BARRE DE NAVIGATION -->
+<nav class="navbar navbar-expand-md navbar-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#accueil"><i class="bi bi-compass"></i> Horizon Voyages</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Ouvrir le menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link" href="#destinations">Destinations</a></li>
+        <li class="nav-item"><a class="nav-link" href="#circuits">Circuits</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+ 
+<!-- 2. HÉROS -->
+<header class="hero" id="accueil">
+  <div class="container">
+    <h1>Partez là où le sable est blanc</h1>
+    <p class="lead mb-4">Des séjours et circuits sur mesure, de l’Afrique de l’Ouest à l’Asie.</p>
+    <a href="#contact" class="btn btn-corail btn-lg">Demander un devis gratuit</a>
+  </div>
+</header>
+ 
+<!-- 3. DESTINATIONS -->
+<section id="destinations">
+  <div class="container">
+    <h2 class="text-center mb-5">Nos destinations</h2>
+    <div class="row g-4">
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Tour Eiffel à Paris">
+          <div class="card-body">
+            <h3 class="h5">Paris, France</h3>
+            <p class="card-text mb-0">Musées, cafés et balades au bord de la Seine. Idéal pour un week-end de 3 jours.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Temple et cerisiers au Japon">
+          <div class="card-body">
+            <h3 class="h5">Kyoto, Japon</h3>
+            <p class="card-text mb-0">Temples, jardins et cuisine raffinée. Le printemps y est particulièrement beau.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Girafes dans la savane">
+          <div class="card-body">
+            <h3 class="h5">Masai Mara, Kenya</h3>
+            <p class="card-text mb-0">Safari au lever du soleil et rencontres avec les éléphants, lions et girafes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- 4. CIRCUITS (ACCORDÉON) -->
+<section id="circuits" class="bg-sable">
+  <div class="container">
+    <h2 class="text-center mb-5">Nos circuits organisés</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <div class="accordion" id="accordeonCircuits">
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#c1" aria-expanded="true" aria-controls="c1">
+                Grand safari kényan – 8 jours
+              </button>
+            </h3>
+            <div id="c1" class="accordion-collapse collapse show" data-bs-parent="#accordeonCircuits">
+              <div class="accordion-body">
+                Huit jours entre Nairobi, le lac Naivasha et le Masai Mara, avec lodges et safaris guidés.
+                <div class="mt-2"><a href="#">Voir les détails</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c2" aria-expanded="false" aria-controls="c2">
+                Japon classique – 10 jours
+              </button>
+            </h3>
+            <div id="c2" class="accordion-collapse collapse" data-bs-parent="#accordeonCircuits">
+              <div class="accordion-body">
+                De Tokyo à Kyoto en train rapide, avec visites guidées, nuit en auberge traditionnelle et atelier de cuisine.
+                <div class="mt-2"><a href="#">Voir les détails</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c3" aria-expanded="false" aria-controls="c3">
+                Escapade à Paris – 4 jours
+              </button>
+            </h3>
+            <div id="c3" class="accordion-collapse collapse" data-bs-parent="#accordeonCircuits">
+              <div class="accordion-body">
+                Hôtel en centre-ville, croisière sur la Seine et entrées prioritaires aux principaux musées.
+                <div class="mt-2"><a href="#">Voir les détails</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- 5. FORMULAIRE DE CONTACT -->
+<section id="contact">
+  <div class="container">
+    <h2 class="text-center mb-5">Parlez-nous de votre voyage</h2>
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-6">
+        <form>
+          <div class="mb-3">
+            <label for="nom" class="form-label">Nom</label>
+            <input type="text" class="form-control" id="nom" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Adresse e-mail</label>
+            <input type="email" class="form-control" id="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="destination" class="form-label">Destination d’intérêt</label>
+            <select class="form-select" id="destination">
+              <option selected>Choisir une destination</option>
+              <option>Paris, France</option>
+              <option>Kyoto, Japon</option>
+              <option>Masai Mara, Kenya</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="5"></textarea>
+          </div>
+          <button type="submit" class="btn btn-corail w-100">Envoyer ma demande</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- 6. PIED DE PAGE -->
+<footer class="text-center">
+  <div class="container">
+    <div class="mb-2">
+      <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+      <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+      <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+    </div>
+    <small>© 2026 Horizon Voyages. Tous droits réservés.</small>
+  </div>
+</footer>
+ 
+
+</body>
+</html>
+ 
