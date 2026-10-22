@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <!-- Viewport : indispensable pour l'affichage mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maison Wax – Boutique artisanale</title>
+ 
+  <!-- Polices Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+ 
+  <!-- Bootstrap 5 (cadre CSS - points bonus) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+  <!-- Notre feuille de style (chargée après Bootstrap pour le surcharger) -->
+  <link rel="stylesheet" href="boutique.css">
+</head>
+<body>
+ 
+  <!-- ============ EN-TÊTE ============ -->
+  <header class="site-header sticky-top">
+    <!-- Composant Bootstrap : navbar avec menu burger sur mobile -->
+    <nav class="navbar navbar-expand-md container">
+      <a class="navbar-brand brand" href="#accueil">Maison Wax</a>
+ 
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#menu" aria-controls="menu"
+              aria-expanded="false" aria-label="Ouvrir le menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+ 
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto gap-md-3">
+          <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#produits">Produits</a></li>
+          <li class="nav-item"><a class="nav-link" href="#apropos">À propos</a></li>
+         
+        </ul>
+      </div>
+    </nav>
+  </header>
+ 
+  <main>
+    <!-- ============ HERO ============ -->
+    <section id="accueil" class="hero">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <h1>Des tissus et accessoires faits main, tissés pour durer.</h1>
+            <p class="lead">Chaque pièce est confectionnée par des artisans d'Abidjan. Choisissez, commandez, recevez chez vous.</p>
+            <a href="#produits" class="btn btn-accent btn-lg">Voir les produits</a>
+          </div>
+          <div class="col-lg-5">
+            <img class="hero-img" src="hero.jpg" onerror="this.onerror=null;this.src='images/hero.svg'"
+                 alt="Rouleaux de tissus wax colorés">
+          </div>
+        </div>
+      </div>
+    </section>
+ 
+    <!-- ============ SECTION PRODUITS ============ -->
+    <section id="produits" class="products">
+      <div class="container">
+        <h2>Nos produits</h2>
+        <p class="section-intro">Quatre pièces choisies cette semaine par l'atelier.</p>
+ 
+        <!-- Grille Bootstrap : 1 colonne (mobile) → 2 (tablette) → 4 (bureau) -->
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+ 
+          <!-- Fiche produit 1 -->
+          <div class="col">
+            <article class="card product-card h-100">
+              <img src="pagne.avif" onerror="this.onerror=null;this.src='images/pagne.svg'" class="card-img-top" alt="Pagne wax bleu et jaune">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title">Pagne wax indigo</h3>
+                <p class="card-text">Coton épais, 6 yards, motifs géométriques.</p>
+                <p class="price">18 000 FCFA</p>
+                <a href="#" class="btn btn-accent mt-auto">Acheter maintenant</a>
+              </div>
+            </article>
+          </div>
+ 
+          <!-- Fiche produit 2 -->
+          <div class="col">
+            <article class="card product-card h-100">
+              <img src="sac.jpg" onerror="this.onerror=null;this.src='images/sac.svg'" class="card-img-top" alt="Sac à main en tissu">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title">Sac cabas en wax</h3>
+                <p class="card-text">Doublé, deux poches intérieures, anses cuir.</p>
+                <p class="price">25 000 FCFA</p>
+                <a href="#" class="btn btn-accent mt-auto">Acheter maintenant</a>
+              </div>
+            </article>
+          </div>
+ 
+          <!-- Fiche produit 3 -->
+          <div class="col">
+            <article class="card product-card h-100">
+              <img src="collier.jpg" onerror="this.onerror=null;this.src='images/collier.svg'" class="card-img-top" alt="Collier de perles artisanal">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title">Collier de perles</h3>
+                <p class="card-text">Perles de verre assemblées à la main.</p>
+                <p class="price">9 500 FCFA</p>
+                <a href="#" class="btn btn-accent mt-auto">Acheter maintenant</a>
+              </div>
+            </article>
+          </div>
+ 
+          <!-- Fiche produit 4 -->
+          <div class="col">
+            <article class="card product-card h-100">
+              <img src="vase.avif" onerror="this.onerror=null;this.src='images/vase.svg'" class="card-img-top" alt="Vase en terre cuite">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title">Vase en terre cuite</h3>
+                <p class="card-text">Pièce unique, 30 cm, finition mate.</p>
+                <p class="price">14 000 FCFA</p>
+                <a href="#" class="btn btn-accent mt-auto">Acheter maintenant</a>
+              </div>
+            </article>
+          </div>
+ 
+        </div>
+      </div>
+    </section>
+ 
+    <!-- ============ À PROPOS ============ -->
+    <section id="apropos" class="about">
+      <div class="container">
+        <h2>À propos</h2>
+        <p class="section-intro">Maison Wax travaille avec une douzaine d'ateliers locaux. Contenu d'exemple à remplacer par votre histoire.</p>
+      </div>
+    </section>
+  </main>
+ 
+  <!-- ============ PIED DE PAGE ============ -->
+  <footer id="contact" class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h3 class="footer-title">Maison Wax</h3>
+          <p>Boutique artisanale en ligne.</p>
+        </div>
+        <div class="col-md-4">
+          <h3 class="footer-title">Contact</h3>
+          <p>contact@maisonwax.example<br>+225 00 00 00 00 00</p>
+        </div>
+        <div class="col-md-4">
+          <h3 class="footer-title">Liens</h3>
+          <p><a href="#produits">Produits</a><br><a href="#apropos">À propos</a></p>
+        </div>
+      </div>
+      <p class="copyright">© 2026 Maison Wax. Tous droits réservés.</p>
+    </div>
+  </footer>
+ 
+  <!-- JavaScript Bootstrap (nécessaire pour le menu burger) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+ 
+Claude a terminé sa réponse.
