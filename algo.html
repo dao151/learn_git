@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Algorithme : analyse d'une phrase</title>  
+</head>
+<body>
+
+Algorithme AnalysePhrase <br> <br> <br>
+
+Variables <br>
+    c : caractère <br>
+    longueur : entier    // compteur 1 : nombre de caractères <br>
+    mots : entier        // compteur 2 : nombre de mots <br>
+    voyelles : entier    // compteur 3 : nombre de voyelles <br><br><br>
+
+Début <br>
+    longueur ← 0 <br>
+    mots ← 0 <br>
+    voyelles ← 0 <br><br>
+
+    Répéter <br>
+        Lire(c) <br>
+        longueur ← longueur + 1 <br><br>
+
+        Si c = ' ' Alors <br>
+            mots ← mots + 1 <br>
+        FinSi <br><br>
+
+        Si c = 'a' ou c = 'e' ou c = 'i' ou c = 'o' ou c = 'u' ou c = 'y' <br>
+           ou c = 'A' ou c = 'E' ou c = 'I' ou c = 'O' ou c = 'U' ou c = 'Y' Alors <br>
+            voyelles ← voyelles + 1 <br>
+        FinSi <br>
+    Jusqu'à c = '.' <br><br>
+
+    mots ← mots + 1 <br><br><br>
+
+    Écrire("Longueur : ", longueur) <br>
+    Écrire("Nombre de mots : ", mots) <br>
+    Écrire("Nombre de voyelles : ", voyelles) <br>
+Fin
+
+  
+</body>
+</html>
